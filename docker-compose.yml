@@ -4,6 +4,7 @@ services:
     build:
       context: ./Docker-files/db
     image: iamyole/vprofiledb
+    container_name: vprodb
     ports:
       - "3306:3306"
     volumes:
@@ -28,6 +29,7 @@ services:
     build:
       context: ./Docker-files/app
     image: iamyole/vprofileapp
+    container_name: vproapp
     ports:
       - "8080:8080"
     volumes: 
@@ -37,6 +39,7 @@ services:
     build:
       context: ./Docker-files/web
     image: iamyole/vprofileweb
+    container_name: vproweb
     ports:
       - "80:80"
 volumes:
